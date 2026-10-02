@@ -1,4 +1,4 @@
-package week_6.class_problems;
+package week_5.class_problems;
 
 public class LibraryMember {
     private String membershipId;

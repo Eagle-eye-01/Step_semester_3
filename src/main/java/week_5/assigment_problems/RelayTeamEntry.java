@@ -1,4 +1,4 @@
-package week_6.assigment_problems;
+package week_5.assigment_problems;
 
 public class RelayTeamEntry extends RaceEntry {
     private int teamSize;
