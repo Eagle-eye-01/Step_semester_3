@@ -52,12 +52,11 @@ public class FoodOrderSystem {
 
     public static class Order {
         private static int orderCounter = 122;
-        private final int orderId;
+        private int orderId;
         private final List<LineItem> items = new ArrayList<>();
         private String status = "Created";
 
         public Order() {
-            this.orderId = ++orderCounter;
         }
 
         public void addItem(String name, int qty) {
@@ -69,6 +68,7 @@ public class FoodOrderSystem {
                 System.out.println("Cannot place order: Order must contain at least one item.");
                 return false;
             }
+            this.orderId = ++orderCounter;
 
             boolean success = paymentMethod.processPayment(100.0);
             if (success) {

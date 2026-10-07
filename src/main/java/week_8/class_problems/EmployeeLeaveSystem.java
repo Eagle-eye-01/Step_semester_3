@@ -3,7 +3,12 @@ package week_8.class_problems;
 public class EmployeeLeaveSystem {
 
     public enum LeaveStatus {
-        PENDING, APPROVED, REJECTED
+        PENDING("Pending"), APPROVED("Approved"), REJECTED("Rejected");
+
+        private final String displayName;
+        LeaveStatus(String displayName) { this.displayName = displayName; }
+        public String getDisplayName() { return displayName; }
+        @Override public String toString() { return displayName; }
     }
 
     public static abstract class Employee {
